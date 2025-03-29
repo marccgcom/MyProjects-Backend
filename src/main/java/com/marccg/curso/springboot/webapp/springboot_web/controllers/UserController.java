@@ -1,7 +1,5 @@
 package com.marccg.curso.springboot.webapp.springboot_web.controllers;
 
-import java.util.Map;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,10 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class UserController {
     
     @GetMapping("/details")
-    public String details(Map<String, Object> model) {
-        model.put("title", "Hola  mundo spring boot");
-        model.put("name", "Marc");
-        model.put("lastname", "CG");
+    public String details(Model model) {
+        model.addAttribute("title", "Hola  mundo spring boot");
+        model.addAttribute("name", "Marc");
+        model.addAttribute("lastname", "CG");
         return "details";
     }
 }

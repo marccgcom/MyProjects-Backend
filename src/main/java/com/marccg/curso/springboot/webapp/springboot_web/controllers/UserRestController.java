@@ -8,18 +8,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.marccg.curso.springboot.webapp.springboot_web.Models.User;
+import com.marccg.curso.springboot.webapp.springboot_web.Models.dto.UserDto;
 
 @RestController
 @RequestMapping("/api")
 public class UserRestController {
     
     @RequestMapping(path="/details", method=RequestMethod.GET)
-    public Map<String, Object> details() {
+    public UserDto details() {
         User user = new User("Marc", "CG");
-        Map<String, Object> response = new HashMap<>();
-
-        response.put("title", "Hola  mundo spring boot");
-        response.put("user", user);
-        return response;
+        UserDto userDto = new UserDto("Title Spring Boot", user);
+        return userDto;
     }
 }

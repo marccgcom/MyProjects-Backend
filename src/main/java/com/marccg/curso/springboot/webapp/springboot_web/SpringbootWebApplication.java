@@ -5,9 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication
 @EnableJpaRepositories
-@EntityScan("com.tu.paquete.modelo")
+@SpringBootApplication(scanBasePackages = "com.marccg.curso.springboot.webapp.springboot_web")
+@EntityScan("com.marccg.curso.springboot.webapp.springboot_web.Models")
 public class SpringbootWebApplication {
 
 	public static void main(String[] args) {

@@ -22,4 +22,46 @@ public class Project {
 
     @OneToMany(mappedBy = "project")
     private List<Task> tasks;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public List<User> getResponsibleUsers() {
+        return responsibleUsers;
+    }
+
+    public void setResponsibleUsers(List<User> responsibleUsers) {
+        this.responsibleUsers = responsibleUsers;
+    }
+
+    public List<Task> getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(List<Task> tasks) {
+        this.tasks = tasks;
+    }
+
+    
 }

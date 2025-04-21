@@ -32,4 +32,78 @@ public class Task {
 
     @ManyToOne
     private Project project;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public TaskType getTaskType() {
+        return taskType;
+    }
+
+    public void setTaskType(TaskType taskType) {
+        this.taskType = taskType;
+    }
+
+    public Double getScheduledTotalTime() {
+        return scheduledTotalTime;
+    }
+
+    public void setScheduledTotalTime(Double scheduledTotalTime) {
+        this.scheduledTotalTime = scheduledTotalTime;
+    }
+
+    public Double getRealTotalTime() {
+        return realTotalTime;
+    }
+
+    public void setRealTotalTime(Double realTotalTime) {
+        this.realTotalTime = realTotalTime;
+    }
+
+    public List<TimeRecord> getTimeRecords() {
+        return timeRecords;
+    }
+
+    public void setTimeRecords(List<TimeRecord> timeRecords) {
+        this.timeRecords = timeRecords;
+    }
+
+    public List<User> getAssignedUsers() {
+        return assignedUsers;
+    }
+
+    public void setAssignedUsers(List<User> assignedUsers) {
+        this.assignedUsers = assignedUsers;
+    }
+
+    public Project getProject() {
+        return project;
+    }
+
+    public void setProject(Project project) {
+        this.project = project;
+    }
+
+    
 }

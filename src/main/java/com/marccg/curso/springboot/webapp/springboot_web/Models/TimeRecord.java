@@ -16,4 +16,38 @@ public class TimeRecord {
 
     @ManyToOne
     private Task task;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public LocalDateTime getDatetime() {
+        return datetime;
+    }
+
+    public void setDatetime(LocalDateTime datetime) {
+        this.datetime = datetime;
+    }
+
+    public Double getDedicatedHours() {
+        return dedicatedHours;
+    }
+
+    public void setDedicatedHours(Double dedicatedHours) {
+        this.dedicatedHours = dedicatedHours;
+    }
+
+    public Task getTask() {
+        return task;
+    }
+
+    public void setTask(Task task) {
+        this.task = task;
+    }
+
+    
 }

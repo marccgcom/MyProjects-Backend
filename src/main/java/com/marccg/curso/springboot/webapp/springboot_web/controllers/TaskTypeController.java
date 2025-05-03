@@ -47,9 +47,9 @@ public class TaskTypeController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<TaskType> updateTaskType(@PathVariable Long id, @RequestBody TaskType updatedTask) {
+    public ResponseEntity<TaskType> updateTaskType(@PathVariable Long id, @RequestBody TaskType updatedTaskType) {
         return taskTypeService.findById(id).map(task -> {
-            task.setName(updatedTask.getName());
+            task.setName(updatedTaskType.getName());
             return ResponseEntity.ok(taskTypeService.save(task));
         })
         .orElse(ResponseEntity.notFound().build());

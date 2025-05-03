@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 
 
 @RestController
-@RequestMapping("/api/Status")
+@RequestMapping("/api/status")
 public class StatusController {
     
     private final StatusService statusService;

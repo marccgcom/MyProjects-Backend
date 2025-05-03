@@ -3,7 +3,6 @@ package com.marccg.curso.springboot.webapp.springboot_web.services;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.marccg.curso.springboot.webapp.springboot_web.Models.Project;

@@ -42,7 +42,7 @@ public class ProjectController {
     }
 
     @PostMapping
-    public Project createPrtoject(@RequestBody Project project) {
+    public Project createProject(@RequestBody Project project) {
         return projectService.save(project);
     }
 

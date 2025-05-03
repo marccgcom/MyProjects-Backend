@@ -42,7 +42,7 @@ public class StatusController {
     }
 
     @PostMapping
-    public Status createPrtoject(@RequestBody Status status) {
+    public Status createStatus(@RequestBody Status status) {
         return statusService.save(status);
     }
 
@@ -64,6 +64,4 @@ public class StatusController {
         return ResponseEntity.notFound().build();
     }
     
-
-
 }

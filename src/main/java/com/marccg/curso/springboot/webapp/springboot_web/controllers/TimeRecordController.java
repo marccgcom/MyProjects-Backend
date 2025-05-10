@@ -51,7 +51,6 @@ public class TimeRecordController {
         return timeRecordService.findById(id).map(timeRecord -> {
             timeRecord.setDatetime(updatedTimeRecord.getDatetime());
             timeRecord.setDedicatedHours(updatedTimeRecord.getDedicatedHours());
-            timeRecord.setTask(updatedTimeRecord.getTask());
             return ResponseEntity.ok(timeRecordService.save(timeRecord));
         })
         .orElse(ResponseEntity.notFound().build());

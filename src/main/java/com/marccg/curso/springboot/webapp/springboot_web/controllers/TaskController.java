@@ -56,7 +56,6 @@ public class TaskController {
             task.setRealTotalTime(updatedTask.getRealTotalTime());
             task.setTimeRecords(updatedTask.getTimeRecords());
             task.setAssignedUsers(updatedTask.getAssignedUsers());
-            task.setProject(updatedTask.getProject());
             return ResponseEntity.ok(taskService.save(task));
         })
         .orElse(ResponseEntity.notFound().build());

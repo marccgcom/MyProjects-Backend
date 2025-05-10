@@ -30,9 +30,6 @@ public class Task {
     @ManyToMany
     private List<User> assignedUsers;
 
-    @ManyToOne
-    private Project project;
-
     public Long getId() {
         return id;
     }
@@ -95,14 +92,6 @@ public class Task {
 
     public void setAssignedUsers(List<User> assignedUsers) {
         this.assignedUsers = assignedUsers;
-    }
-
-    public Project getProject() {
-        return project;
-    }
-
-    public void setProject(Project project) {
-        this.project = project;
     }
 
     

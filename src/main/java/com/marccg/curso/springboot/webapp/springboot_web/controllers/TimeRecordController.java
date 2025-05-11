@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PutMapping;
 
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 
 
 @RestController
@@ -30,8 +32,8 @@ public class TimeRecordController {
     }
 
     @GetMapping
-    public List<TimeRecord> getAllTimeRecords() {
-        return timeRecordService.findAll();
+    public Page<TimeRecord> getAllTimeRecords(@PageableDefault(size = 10, sort = "id") Pageable pageable) {
+        return timeRecordService.findAll(pageable);
     }
     
     @GetMapping("/{id}")

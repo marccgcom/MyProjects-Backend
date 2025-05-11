@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
 @Service
 public class TimeRecordService {
 
@@ -17,8 +20,8 @@ public class TimeRecordService {
         this.timeRecordRepository = timeRecordRepository;
     }
 
-    public List<TimeRecord> findAll() {
-        return timeRecordRepository.findAll();
+    public Page<TimeRecord> findAll(Pageable pageable) {
+        return timeRecordRepository.findAll(pageable);
     }
 
     public Optional<TimeRecord> findById(Long id) {
